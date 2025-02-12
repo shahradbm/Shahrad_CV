@@ -27,6 +27,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+import os
+
+# تنظیم پوشه استاتیک
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'cv_app', 'static'),  # مسیر فایل‌های استاتیک
+]
+
+# تنظیم پوشه مدیا   
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'cv_app', 'media')  # مسیر فایل‌های مدیا
 
 # Application definition
 
